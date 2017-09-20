@@ -5,7 +5,7 @@
 <html lang="fr">
 <!--<![endif]-->
 <head>
-    <head>
+
         <meta charset="utf-8">
         <title>Title project</title>
         <meta name="description" content="Description project"/>
@@ -28,17 +28,380 @@
 
         <!-- site CSS file -->
         <link rel="stylesheet" href="stylesheets/main.css">
-    </head>
+
 </head>
 <body class="body">
 <!--.scrollToTop-->
-<div class="scrollToTop"><i class="fa fa-chevron-up"></i>Haut</div>
+<!--<div class="scrollToTop"><i class="fa fa-chevron-up"></i>Haut</div>-->
 <!--/.scrollToTop-->
 
 <div class="wrapper">
     <!--.header-->
     <header class="header">
-        <h2>HEADER</h2>
+
+        <!--.header--top-->
+        <div class="header--top">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-4 hidden-xs">
+                        <a href="#" class="label-store"><i class="icon-home icon-before"></i> Concept store</a>
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-xs-16 text-center">
+                        <a href="#" class="label-store">Les bonnes affaires du printemps: jusqu’a -60% <i class="icon-arrow-right  icon-after"></i></a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4 hidden-xs">
+                        <ul class="top-menu">
+                            <li><a href="#"><i class="icon-phone icon-before"></i> 04 58 10 00 60</a></li>
+                            <li><a href="#"><i class="icon-envelope icon-before"></i> Contact</a></li>
+                            <li>
+                                <ul class="top-share">
+                                    <li><a href="#"><i class="icon-social-facebook"></i></a></li>
+                                    <li><a href="#"><i class="icon-social-instagram"></i></a></li>
+                                    <li><a href="#"><i class="icon-social-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="icon-social-youtube"></i></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/.header--top-->
+
+        <!--.header--nav-->
+        <div class="header--navbar">
+            <div class="container">
+                <div class="row row-flex v-align-m row-collapse">
+                    <div class="col-md-5 col-sm-3 col-xs-6">
+                        <button type="button" class="navbar-toggle collapsed visible-xs-inline-block" id="btn-main-menu_id" data-toggle="collapse" data-target="#main-navigation_id">
+                            <span class="icon-bar"></span> <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <button type="button" class="searchbox-toggle collapsed visible-xs-inline-block" id="btn-search-box_id" data-toggle="collapse" data-target="#search-box_id">
+                            <i class="icon-magnifier"></i>
+                        </button>
+                        <!--.search-box-->
+                        <form role="search" class="form-material search-box" id="search-box_id">
+                            <div class="form-group has-feedback">
+                                <input type="text" class="form-control" id="search-box-input_id" placeholder="Rechercher un produit, une marque, une matière...">
+                                <button type="submit" class="btn btn-link btn-search" id="btn-search_id"><i class="icon-magnifier" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-link btn-close visible-xs" id="btn-close_id" data-toggle="collapse" data-target="#search-box_id"><i class="close" aria-hidden="true"></i></button>
+                            </div>
+                        </form>
+                        <!--/.search-box-->
+                    </div>
+
+                    <div class="col-md-8 col-sm-6 col-xs-4 text-center">
+                        <a href="#" class="logo">
+                            <img src="images/logo.png" class="img-responsive hidden-xs" alt="zago store">
+                            <img src="images/logo-mobile.png" class="img-responsive visible-xs" alt="zago store">
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-6 text-right">
+                        <ul class="nav-user">
+                            <li>
+                                <a href="#" class="item" data-toggle="tooltip" data-placement="bottom" title="Mon compte"><i class="icon-user"></i></a>
+                            </li>
+                            <li class="hidden-xs">
+                                <a href="#" class="item" data-toggle="tooltip" data-placement="bottom" title="Mes favoris"><i class="icon-heart"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="item" data-toggle="tooltip" data-placement="bottom" title="Mon panier"><i class="icon-bag"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/.header--nav-->
+
+        <!-- main-navigation start -->
+        <!-- classes: -->
+        <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+        <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+        <!-- ================ -->
+        <div class="main-navigation collapse animated" id="main-navigation_id">
+
+            <!-- navbar start -->
+            <!-- ================ -->
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container">
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <!-- main-menu -->
+                    <ul class="nav navbar-nav">
+
+                        <!-- mega-menu start -->
+                        <li class="dropdown mega-menu narrow">
+                            <a href="#" class="dropdown-toggle special" data-toggle="dropdown">Du Nouveau</a>
+                            <!--.dropdown-menu-->
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div class="row row-collapse">
+                                        <div class="col-lg-12 col-md-12 col-sm-16 col-xs-16 col-sub-menu grid-pad">
+                                            <div class="menu-breadcrumb row visible-xs">
+                                                <div class="col-xs-1-1">
+                                                    <a href="#" class="title-head-menu special"><i class="icon-arrow-left"></i> Du Nouveau</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <!--.dropdown-box-->
+                                                <div class="col-lg-1-3 col-md-1-3 col-sm-1-2 col-xs-1-1 dropdown dropdown-box">
+                                                    <a href="#" class="dropdown-toggle title-sub-menu" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><strong>Luminaires</strong></a>
+                                                    <ul class="dropdown-menu menu" aria-labelledby="dropdownMenu1">
+                                                        <li class="menu-breadcrumb visible-xs">
+                                                            <a href="#" class="title-n1 title-head-menu special"><i class="icon-arrow-left"></i> Du Nouveau</a><a href="#" class="title-n2">Luminaires</a>
+                                                        </li>
+                                                        <li><a href="#">Suspensions</a></li>
+                                                        <li><a href="#">Lampes à poser</a></li>
+                                                        <li><a href="#">Lampadaires</a></li>
+                                                        <li><a href="#">Appliques</a></li>
+                                                        <li><a href="#">Ampoules</a></li>
+                                                        <li><a href="#" class="all-link">Voir tous les produits</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!--/.dropdown-box-->
+                                                <!--.dropdown-box-->
+                                                <div class="col-lg-1-3 col-md-1-3 col-sm-1-2 col-xs-1-1 dropdown dropdown-box">
+                                                    <a href="#" class="dropdown-toggle title-sub-menu" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><strong>Décoration murale</strong></a>
+                                                    <ul class="dropdown-menu menu" aria-labelledby="dropdownMenu2">
+                                                        <li class="menu-breadcrumb visible-xs">
+                                                            <a href="#" class="title-n1 title-head-menu special"><i class="icon-arrow-left"></i> Du Nouveau</a><a href="#" class="title-n2">Décoration murale</a>
+                                                        </li>
+                                                        <li><a href="#">Horloges</a></li>
+                                                        <li><a href="#">Miroirs</a></li>
+                                                        <li><a href="#" class="all-link">Voir tous les produits</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!--/.dropdown-box-->
+                                                <!--.dropdown-box-->
+                                                <div class="col-lg-1-3 col-md-1-3 col-sm-1-2 col-xs-1-1 dropdown dropdown-box">
+                                                    <a href="#" class="dropdown-toggle title-sub-menu" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><strong>Coin jardin</strong></a>
+                                                    <ul class="dropdown-menu menu" aria-labelledby="dropdownMenu3">
+                                                        <li class="menu-breadcrumb visible-xs">
+                                                            <a href="#" class="title-n1 title-head-menu special"><i class="icon-arrow-left"></i> Du Nouveau</a><a href="#" class="title-n2">Coin jardin</a>
+                                                        </li>
+                                                        <li><a href="#">Plantes</a></li>
+                                                        <li><a href="#">Potagers urbains</a></li>
+                                                        <li><a href="#">Accessoires de jardin</a></li>
+                                                        <li><a href="#" class="all-link">Voir tous les produits</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!--/.dropdown-box-->
+                                                <!--.dropdown-box-->
+                                                <div class="col-lg-1-3 col-md-1-3 col-sm-1-2 col-xs-1-1 dropdown dropdown-box">
+                                                    <a href="#" class="dropdown-toggle title-sub-menu" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><strong>Objets déco</strong></a>
+                                                    <ul class="dropdown-menu menu" aria-labelledby="dropdownMenu4">
+                                                        <li class="menu-breadcrumb visible-xs">
+                                                            <a href="#" class="title-n1 title-head-menu special"><i class="icon-arrow-left"></i> Du Nouveau</a><a href="#" class="title-n2">Objets déco</a>
+                                                        </li>
+                                                        <li><a href="#">Vases et suspensions</a></li>
+                                                        <li><a href="#">Bougeoirs</a></li>
+                                                        <li><a href="#">Paniers</a></li>
+                                                        <li><a href="#">Malles & coffres</a></li>
+                                                        <li><a href="#">Lettres décoratives</a></li>
+                                                        <li><a href="#">Echelles décoratives</a></li>
+                                                        <li><a href="#" class="all-link">Voir tous les produits</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!--/.dropdown-box-->
+                                                <!--.dropdown-box-->
+                                                <div class="col-lg-1-3 col-md-1-3 col-sm-1-2 col-xs-1-1">
+                                                    <a href="#" class="title-sub-menu"><strong>Art de la table</strong></a>
+                                                </div>
+                                                <!--/.dropdown-box-->
+                                                <!--.dropdown-box-->
+                                                <div class="col-lg-1-3 col-md-1-3 col-sm-1-2 col-xs-1-1">
+                                                    <a href="#" class="title-sub-menu"><strong>Tapis</strong></a>
+                                                </div>
+                                                <!--/.dropdown-box-->
+
+                                                <!--.dropdown-box-->
+                                                <div class="col-lg-1-3 col-md-1-3 col-sm-1-2 col-xs-1-1 dropdown dropdown-box">
+                                                    <a href="#" class="dropdown-toggle title-sub-menu" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><strong>Linge de maison</strong></a>
+                                                    <ul class="dropdown-menu menu" aria-labelledby="dropdownMenu5">
+                                                        <li class="menu-breadcrumb visible-xs">
+                                                            <a href="#" class="title-n1 title-head-menu special"><i class="icon-arrow-left"></i> Du Nouveau</a><a href="#" class="title-n2">Linge de maison</a>
+                                                        </li>
+                                                        <li><a href="#">Coussins</a></li>
+                                                        <li><a href="#">Plaids</a></li>
+                                                        <li><a href="#">Etagères</a></li>
+                                                        <li><a href="#" class="all-link">Voir tous les produits</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!--/.dropdown-box-->
+
+                                                <!--.dropdown-box-->
+                                                <div class="col-lg-1-3 col-md-1-3 col-sm-1-2 col-xs-1-1 dropdown dropdown-box">
+                                                    <ul class="extra-menu-list list-unstyled">
+                                                        <li>
+                                                            <a href="#" class="title-sub-menu"><strong>Nos marques invitées</strong></a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="#">Etat Brut</a></li>
+                                                                <li><a href="#">Harmony textile</a></li>
+                                                                <li><a href="#">Hestera garden</a></li>
+                                                                <li>
+                                                                    <a href="#" class="all-link">Voir tous les produits</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" class="title-sub-menu"><strong>Du nouveau</strong></a>
+                                                            <a href="#" class="title-sub-menu"><strong>Nos coups de coeur</strong></a>
+                                                            <a href="#" class="title-sub-menu"><strong>Promo</strong></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!--/.dropdown-box-->
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-16 col-xs-16">
+                                            <!--.pub-box-->
+                                            <div class="pub-box">
+                                                <a href="#"> <img src="http://placehold.it/270x600" alt=""> </a>
+                                            </div>
+                                            <!--.pub-box-->
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!--/.dropdown-menu-->
+                        </li>
+                        <!-- mega-menu end -->
+
+                        <!-- mega-menu start -->
+                        <li class="dropdown  mega-menu narrow">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">De beaux <strong>meubles</strong></a>
+                            <!--.dropdown-menu-->
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div class="row row-collapse">
+                                        <div class="col-lg-12 col-md-12 col-sm-16 col-xs-16 col-sub-menu grid-pad">
+                                            <div class="row">
+                                                <!--.dropdown-box-->
+                                                <div class="col-lg-1-3 col-md-1-3 col-sm-1-2 col-xs-1-1 dropdown dropdown-box">
+                                                    <a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><strong>Luminaires</strong></a>
+                                                    <ul class="dropdown-menu menu" aria-labelledby="dropdownMenu1">
+                                                        <li><a href="#">Suspensions</a></li>
+                                                        <li><a href="#">Lampes à poser</a></li>
+                                                        <li><a href="#">Lampadaires</a></li>
+                                                        <li><a href="#">Appliques</a></li>
+                                                        <li><a href="#">Ampoules</a></li>
+                                                        <li><a href="#" class="all-link">Voir tous les produits</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!--/.dropdown-box-->
+                                                <!--.dropdown-box-->
+                                                <div class="col-lg-1-3 col-md-1-3 col-sm-1-2 col-xs-1-1 dropdown dropdown-box">
+                                                    <a href="#" class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><strong>Décoration murale</strong></a>
+                                                    <ul class="dropdown-menu menu" aria-labelledby="dropdownMenu2">
+                                                        <li><a href="#">Horloges</a></li>
+                                                        <li><a href="#">Miroirs</a></li>
+                                                        <li><a href="#" class="all-link">Voir tous les produits</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!--/.dropdown-box-->
+                                                <!--.dropdown-box-->
+                                                <div class="col-lg-1-3 col-md-1-3 col-sm-1-2 col-xs-1-1 dropdown dropdown-box">
+                                                    <a href="#" class="dropdown-toggle" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><strong>Coin jardin</strong></a>
+                                                    <ul class="dropdown-menu menu" aria-labelledby="dropdownMenu3">
+                                                        <li><a href="#">Plantes</a></li>
+                                                        <li><a href="#">Potagers urbains</a></li>
+                                                        <li><a href="#">Accessoires de jardin</a></li>
+                                                        <li><a href="#" class="all-link">Voir tous les produits</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!--/.dropdown-box-->
+                                                <!--.dropdown-box-->
+                                                <div class="col-lg-1-3 col-md-1-3 col-sm-1-2 col-xs-1-1 dropdown dropdown-box">
+                                                    <a href="#" class="dropdown-toggle" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><strong>Objets déco</strong></a>
+                                                    <ul class="dropdown-menu menu" aria-labelledby="dropdownMenu4">
+                                                        <li><a href="#">Vases et suspensions</a></li>
+                                                        <li><a href="#">Bougeoirs</a></li>
+                                                        <li><a href="#">Paniers</a></li>
+                                                        <li><a href="#">Malles & coffres</a></li>
+                                                        <li><a href="#">Lettres décoratives</a></li>
+                                                        <li><a href="#">Echelles décoratives</a></li>
+                                                        <li><a href="#" class="all-link">Voir tous les produits</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!--/.dropdown-box-->
+                                                <!--.dropdown-box-->
+                                                <div class="col-lg-1-3 col-md-1-3 col-sm-1-2 col-xs-1-1">
+                                                    <a href="#"><strong>Art de la table</strong></a>
+                                                </div>
+                                                <!--/.dropdown-box-->
+                                                <!--.dropdown-box-->
+                                                <div class="col-lg-1-3 col-md-1-3 col-sm-1-2 col-xs-1-1">
+                                                    <a href="#"><strong>Tapis</strong></a>
+                                                </div>
+                                                <!--/.dropdown-box-->
+
+                                                <!--.dropdown-box-->
+                                                <div class="col-lg-1-3 col-md-1-3 col-sm-1-2 col-xs-1-1 dropdown dropdown-box">
+                                                    <a href="#" class="dropdown-toggle" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><strong>Linge de maison</strong></a>
+                                                    <ul class="dropdown-menu menu" aria-labelledby="dropdownMenu5">
+                                                        <li><a href="#">Coussins</a></li>
+                                                        <li><a href="#">Plaids</a></li>
+                                                        <li><a href="#">Etagères</a></li>
+                                                        <li><a href="#" class="all-link">Voir tous les produits</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!--/.dropdown-box-->
+
+                                                <!--.dropdown-box-->
+                                                <div class="col-lg-1-3 col-md-1-3 col-sm-1-2 col-xs-1-1 dropdown dropdown-box">
+                                                    <ul class="extra-menu-list list-unstyled">
+                                                        <li class="dropdown">
+                                                            <a href="#" class="dropdown-toggle"><strong>Nos marques invitées</strong></a>
+                                                            <ul class="dropdown-menu menu">
+                                                                <li><a href="#">Etat Brut</a></li>
+                                                                <li><a href="#">Harmony textile</a></li>
+                                                                <li><a href="#">Hestera garden</a></li>
+                                                                <li>
+                                                                    <a href="#" class="all-link">Voir tous les produits</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#"><strong>Du nouveau</strong></a></li>
+                                                        <li><a href="#"><strong>Nos coups de coeur</strong></a></li>
+                                                        <li><a href="#"><strong>Promo</strong></a></li>
+                                                    </ul>
+                                                </div>
+                                                <!--/.dropdown-box-->
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-16 col-xs-16">
+                                            <!--.pub-box-->
+                                            <div class="pub-box">
+                                                <a href="#"> <img src="http://placehold.it/270x600" alt=""> </a>
+                                            </div>
+                                            <!--.pub-box-->
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!--/.dropdown-menu-->
+                        </li>
+                        <!-- mega-menu end -->
+
+                        <!-- simple-menu start -->
+                        <li class="narrow theme-9">
+                            <a href="#">+ de sport</a>
+                        </li>
+                        <!-- simple-menu end -->
+
+                    </ul>
+                    <!-- main-menu end -->
+
+                </div>
+            </nav>
+            <!-- navbar end -->
+
+        </div>
+        <!-- main-navigation end -->
+
     </header>
     <!--/.header-->
     <main class="main">

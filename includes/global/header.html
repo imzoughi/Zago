@@ -1,5 +1,86 @@
 <!--.header-->
 <header class="header">
-    <h2>HEADER</h2>
+
+    <!--.header--top-->
+    <div class="header--top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-4 hidden-xs">
+                    <a href="#" class="label-store"><i class="icon-home icon-before"></i> Concept store</a>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-16 text-center">
+                    <a href="#" class="label-store">Les bonnes affaires du printemps: jusqu’a -60% <i class="icon-arrow-right  icon-after"></i></a>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4 hidden-xs">
+                    <ul class="top-menu">
+                        <li><a href="#"><i class="icon-phone icon-before"></i> 04 58 10 00 60</a></li>
+                        <li><a href="#"><i class="icon-envelope icon-before"></i> Contact</a></li>
+                        <li>
+                            <ul class="top-share">
+                                <li><a href="#"><i class="icon-social-facebook"></i></a></li>
+                                <li><a href="#"><i class="icon-social-instagram"></i></a></li>
+                                <li><a href="#"><i class="icon-social-pinterest"></i></a></li>
+                                <li><a href="#"><i class="icon-social-youtube"></i></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/.header--top-->
+
+    <!--.header--nav-->
+    <div class="header--navbar">
+        <div class="container">
+            <div class="row row-flex v-align-m row-collapse">
+                <div class="col-md-5 col-sm-3 col-xs-6">
+                    <button type="button" class="navbar-toggle collapsed visible-xs-inline-block" id="btn-main-menu_id" data-toggle="collapse" data-target="#main-navigation_id">
+                        <span class="icon-bar"></span> <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <button type="button" class="searchbox-toggle collapsed visible-xs-inline-block" id="btn-search-box_id" data-toggle="collapse" data-target="#search-box_id">
+                        <i class="icon-magnifier"></i>
+                    </button>
+                    <!--.search-box-->
+                    <form role="search" class="form-material search-box" id="search-box_id">
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" id="search-box-input_id" placeholder="Rechercher un produit, une marque, une matière...">
+                            <button type="submit" class="btn btn-link btn-search" id="btn-search_id"><i class="icon-magnifier" aria-hidden="true"></i></button>
+                            <button type="button" class="btn btn-link btn-close visible-xs" id="btn-close_id" data-toggle="collapse" data-target="#search-box_id"><i class="close" aria-hidden="true"></i></button>
+                        </div>
+                    </form>
+                    <!--/.search-box-->
+                </div>
+
+                <div class="col-md-8 col-sm-6 col-xs-4 text-center">
+                    <a href="#" class="logo">
+                        <img src="images/logo.png" class="img-responsive hidden-xs" alt="zago store">
+                        <img src="images/logo-mobile.png" class="img-responsive visible-xs" alt="zago store">
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-6 text-right">
+                    <ul class="nav-user">
+                        <li>
+                            <a href="#" class="item" data-toggle="tooltip" data-placement="bottom" title="Mon compte"><i class="icon-user"></i></a>
+                        </li>
+                        <li class="hidden-xs">
+                            <a href="#" class="item" data-toggle="tooltip" data-placement="bottom" title="Mes favoris"><i class="icon-heart"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="item" data-toggle="tooltip" data-placement="bottom" title="Mon panier"><i class="icon-bag"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/.header--nav-->
+
+    <!-- main-navigation start -->
+    <!--(bake /includes/global/main-navigation.html)-->
+    <!-- main-navigation end -->
+
 </header>
 <!--/.header-->
