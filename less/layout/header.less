@@ -22,7 +22,7 @@
       }
     }
   &--navbar {
-    padding : 50px 0;
+    padding : 50px 0 30px;
     @media (max-width : @screen-xs-max) {
       position : relative;
       padding  : 10px 0;
@@ -42,12 +42,12 @@
   > li {
     display        : inline-block;
     vertical-align : middle;
-    &:after {
+    &:before {
       content       : '|';
       padding-left  : 15px;
       padding-right : 15px;
       }
-    &:last-child:after {
+    &:first-child:before {
       content : '';
       padding : 0;
       }

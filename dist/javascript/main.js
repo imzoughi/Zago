@@ -1,7 +1,7 @@
 var $j = jQuery.noConflict();
 
 $j(function() {
-    bootstrapModule.init(), mainNav.init(), responsive.init();
+    picturefill(), bootstrapModule.init(), mainNav.init(), responsive.init();
 });
 
 var bootstrapModule = function() {

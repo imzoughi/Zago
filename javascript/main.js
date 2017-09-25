@@ -12,6 +12,7 @@
 var $j = jQuery.noConflict();
 
 $j(function () {
+    picturefill();
     bootstrapModule.init();
     mainNav.init();
     responsive.init();
