@@ -1,7 +1,7 @@
 var $j = jQuery.noConflict();
 
 $j(function() {
-    picturefill(), bootstrapModule.init(), mainNav.init(), responsive.init();
+    picturefill(), bootstrapModule.init(), mainNav.init(), mainSlideshow.init(), responsive.init();
 });
 
 var bootstrapModule = function() {
@@ -42,11 +42,13 @@ var bootstrapModule = function() {
             0 === $j(this).scrollTop() && (timer_tr && window.clearTimeout(timer_tr), timer_tr = window.setTimeout(function() {
                 trHeaderHeight = $j("header.header").outerHeight(), $j(".transparent-header .tp-bannertimer").css("marginTop", trHeaderHeight + "px");
             }, 300));
-        })), $j(".mega-menu .dropdown-menu .dropdown-box").matchHeight({
-            byRow: !0,
-            property: "height",
-            target: null,
-            remove: !1
+        })), $j(".mega-menu").each(function(i, elem) {
+            $j(elem).find(".dropdown-menu .dropdown-box").matchHeight({
+                byRow: !0,
+                property: "height",
+                target: null,
+                remove: !1
+            });
         }), $j(".btn-main-menu").on("click", function(e) {
             e.preventDefault(), $j(".main-navigation").slideToggle();
         }), $j(".btn-search-xs").on("click", function(e) {
@@ -55,6 +57,29 @@ var bootstrapModule = function() {
             e.preventDefault(), $j(this).toggleClass("is-open"), $j(".nav-user").slideToggle();
         }), $j('.navbar-toggle[data-target="#main-menu-navigation"]').on("click", function(e) {
             e.preventDefault(), $j(".body").toggleClass("object-fixed");
+        });
+    }
+    return {
+        init: _init
+    };
+}(), mainSlideshow = function() {
+    function _init() {
+        $j(".slider-for").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: !0,
+            loop: !0,
+            dots: !0,
+            fade: !0,
+            autoplay: !0,
+            autoplaySpeed: 8e3,
+            responsive: [ {
+                breakpoint: 992,
+                settings: {
+                    dots: !0,
+                    fade: !1
+                }
+            } ]
         });
     }
     return {

@@ -15,6 +15,7 @@ $j(function () {
     picturefill();
     bootstrapModule.init();
     mainNav.init();
+    mainSlideshow.init();
     responsive.init();
 });
 /* ========================================== *\
@@ -129,11 +130,13 @@ var mainNav = function () {
 
         // Give mega-menu dropdown-box
         //----------------------------------------------
-        $j('.mega-menu .dropdown-menu .dropdown-box').matchHeight({
-            byRow: true,
-            property: 'height',
-            target: null,
-            remove: false
+        $j('.mega-menu').each(function(i, elem) {
+            $j(elem)
+                .find('.dropdown-menu .dropdown-box')   // Only children of this row
+                .matchHeight({byRow: true,
+                    property: 'height',
+                    target: null,
+                    remove: false}); // Row detection gets confused so disable it
         });
 
 
@@ -162,6 +165,56 @@ var mainNav = function () {
 
 
 
+    }
+
+    return {
+        init: _init
+    };
+}();
+
+/* =mainSlideshow */
+var mainSlideshow = function () {
+    function _init() {
+
+        $j('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            loop: true,
+            dots: true,
+            fade: true,
+            autoplay: true,
+            autoplaySpeed: 8000,
+            //asNavFor: '.slider-nav',
+
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        dots: true,
+                        fade: false,
+                    }
+                }
+            ]
+        });
+
+        // $j('.slider-nav').slick({
+        //     slidesToShow: 5,
+        //     slidesToScroll: 1,
+        //     asNavFor: '.slider-for',
+        //     dots: false,
+        //     centerMode: false,
+        //     focusOnSelect: true,
+        //
+        //     responsive: [
+        //         {
+        //             breakpoint: 992,
+        //             settings: {
+        //                 fade: false,
+        //             }
+        //         }
+        //     ]
+        // });
     }
 
     return {
