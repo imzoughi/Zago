@@ -29,7 +29,7 @@
 
 /* first level menu item */
 .navbar-default .navbar-nav > li {
-  justify-content: center;
+  justify-content : center;
   > a {
     color          : @brand-primary;
     font-family    : @font-family-base;
@@ -56,8 +56,9 @@
       }
 
     @media (max-width : @screen-xs-max) {
-      font-size : 18px;
-      padding   : 12px 10px 10px;
+      font-size  : 18px;
+      text-align : left;
+      padding    : 12px 10px 10px;
 
       }
 
@@ -106,18 +107,21 @@
     }
 
   &:first-child {
-    justify-content: start;
+    justify-content : start;
     > a {
       border-left : 0 none;
-      text-align: left;
+      text-align  : left;
       }
     }
   &:last-child {
-    justify-content: flex-end;
+    justify-content : flex-end;
 
     > a {
       //border-right : 0 none;
-      text-align: right;
+      text-align : right;
+      @media (max-width : @screen-sm-max) {
+        text-align : left;
+        }
       }
     }
 
@@ -242,7 +246,7 @@
   background-color : #EDEDED;
   }
 
-.dropdown-menu {
+.main-navigation .dropdown-menu {
   min-width        : 220px;
   .border-radius(0px);
   padding          : 0;
@@ -250,11 +254,11 @@
   background-color : transparent;
   .box-shadow(none);
   border           : 0 none;
-  z-index          : 101;
+  z-index          : 999;
   }
 
 /* second level menu item */
-.dropdown-menu > li > a {
+.main-navigation .dropdown-menu > li > a {
   padding       : 10px 20px;
   font-size     : 14px;
   color         : @brand-primary;
@@ -264,24 +268,24 @@
   }
 
 /* second level menu item on focus/hover and when opened */
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus,
+.main-navigation .dropdown-menu > li > a:hover,
+.main-navigation .dropdown-menu > li > a:focus,
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus,
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus,
-.dropdown-menu .menu > .active > a,
-.dropdown-menu .menu > .active > a:hover,
-.dropdown-menu .menu > .active > a:focus {
+.main-navigation .dropdown-menu > .active > a,
+.main-navigation .dropdown-menu > .active > a:hover,
+.main-navigation .dropdown-menu > .active > a:focus,
+.main-navigation .dropdown-menu .menu > .active > a,
+.main-navigation .dropdown-menu .menu > .active > a:hover,
+.main-navigation .dropdown-menu .menu > .active > a:focus {
   background-color : #FFFFFF;
   color            : @brand-primary-hover;
   border-color     : #F7F7F7;
   }
 
 /* third level menu */
-.dropdown-menu .dropdown-menu {
+.main-navigation .dropdown-menu .dropdown-menu {
   top        : -1px;
   left       : 100% !important;
   right      : auto;
@@ -590,7 +594,7 @@ header .dropdown-menu > li.active > a i.fa-circle-o:before {
 #offcanvas.animated .dropdown-menu .open .dropdown-menu {
   .animation-duration(0.3s);
   .animation-fill-mode(both);
-  .animation-name(fadeInUpSmall);
+  .animation-name(fadeInDownSmall);
   }
 
 .animated.main-navigation .dropdown-menu .open .dropdown-menu {
@@ -739,8 +743,8 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
     //-webkit-box-pack   : center;
     //-ms-flex-pack      : center;
     //justify-content    : center;
-    line-height        : 1.2;
-    position           : relative;
+    line-height : 1.2;
+    position    : relative;
 
     //&:after {
     //  content          : '';

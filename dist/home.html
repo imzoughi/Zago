@@ -98,14 +98,21 @@
                     </div>
                     <div class="col-md-3 col-sm-4 col-xs-6 text-right">
                         <ul class="nav-user">
-                            <li>
-                                <a href="#" class="item" data-toggle="tooltip" data-placement="bottom" title="Mon compte"><i class="icon-user"></i></a>
+                            <li class="dropdown">
+                                <a href="#" data-title="Mon compte" class="item" id="mon-compte_id" type="button" data-toggle="dropdown"><i class="icon-user"></i></a>
+                                <ul id="mon-compte-menu_id" class="dropdown-menu center text-center" aria-labelledby="mon-compte_id">
+                                    <li><a href="#">Mon compte</a></li>
+                                    <li><a href="#">Tableau de bord</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Déconnexion</a></li>
+                                </ul>
+
                             </li>
                             <li class="hidden-xs">
-                                <a href="#" class="item" data-toggle="tooltip" data-placement="bottom" title="Mes favoris"><i class="icon-heart"></i></a>
+                                <a href="#" class="item" data-title="Mes favoris"><i class="icon-heart"></i><span class="bulle">2</span></a>
                             </li>
                             <li>
-                                <a href="#" class="item" data-toggle="tooltip" data-placement="bottom" title="Mon panier"><i class="icon-bag"></i></a>
+                                <a href="#" class="item" data-title="Mon panier"><i class="icon-bag"></i><span class="bulle">1</span></a>
                             </li>
                         </ul>
                     </div>
@@ -678,7 +685,7 @@
                                             <div class="caption-head">Nouvelle collection</div>
                                             <div class="caption-head-small">Automne - Hiver</div>
                                         </div>
-                                        <div class="caption-link"><a class="btn btn-primary">Je découvre</a></div>
+                                        <div class="caption-link"><a class="btn btn-primary btn-lg">Je découvre</a></div>
                                     </div>
                                     <!--.slide-caption-->
                                     <!--picture-->
@@ -699,7 +706,7 @@
                                             <div class="caption-head">Nouvelle collection</div>
                                             <div class="caption-head-small">Automne - Hiver</div>
                                         </div>
-                                        <div class="caption-link"><a class="btn btn-primary">Je découvre</a></div>
+                                        <div class="caption-link"><a class="btn btn-primary btn-lg">Je découvre</a></div>
                                     </div>
                                     <!--.slide-caption-->
                                     <!--picture-->
