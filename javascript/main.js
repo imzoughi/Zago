@@ -70,6 +70,9 @@ var mainNav = function () {
             });
 
             $j('.main-navigation [data-toggle=dropdown], .header-top [data-toggle=dropdown]').on('click', function (event) {
+
+                $j(".dropdown-menu").animate({scrollTop: 0}, 800);
+
                 // Avoid following the href location when clicking
                 event.preventDefault();
                 // Avoid having the menu to close when clicking
@@ -158,9 +161,9 @@ var mainNav = function () {
             $j('.nav-user').slideToggle();
         });
 
-        $j('.navbar-toggle[data-target="#main-menu-navigation"]').on('click', function (e) {
+        $j('.navbar-toggle[data-target="#main-navigation_id"]').on('click', function (e) {
             e.preventDefault();
-            $j('.body').toggleClass('object-fixed');
+            $j('.body').toggleClass('body-fixed');
         });
 
 

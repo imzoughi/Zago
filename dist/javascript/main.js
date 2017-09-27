@@ -24,7 +24,9 @@ var bootstrapModule = function() {
         }), (Modernizr.mq("only all and (max-width: 1024px)") && Modernizr.touch || $j(".main-navigation.onclick").length > 0) && ($j(window).resize(function() {
             $j(".main-navigation.collapse") && $j(".main-navigation").removeClass("collapse");
         }), $j(".main-navigation [data-toggle=dropdown], .header-top [data-toggle=dropdown]").on("click", function(event) {
-            event.preventDefault(), event.stopPropagation(), $j(this).parent().siblings().removeClass("open"), 
+            $j(".dropdown-menu").animate({
+                scrollTop: 0
+            }, 800), event.preventDefault(), event.stopPropagation(), $j(this).parent().siblings().removeClass("open"), 
             $j(this).parent().siblings().find("[data-toggle=dropdown]").parent().removeClass("open"), 
             $j(this).parent().toggleClass("open");
         }), $j(".title-n1").on("click", function(event) {
@@ -55,8 +57,8 @@ var bootstrapModule = function() {
             e.preventDefault(), $j(this).toggleClass("is-open"), $j("#search-box_id").slideToggle();
         }), $j(".btn-user-xs").on("click", function(e) {
             e.preventDefault(), $j(this).toggleClass("is-open"), $j(".nav-user").slideToggle();
-        }), $j('.navbar-toggle[data-target="#main-menu-navigation"]').on("click", function(e) {
-            e.preventDefault(), $j(".body").toggleClass("object-fixed");
+        }), $j('.navbar-toggle[data-target="#main-navigation_id"]').on("click", function(e) {
+            e.preventDefault(), $j(".body").toggleClass("body-fixed");
         });
     }
     return {
