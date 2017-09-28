@@ -13,7 +13,7 @@
   .slick-prev {
     left : 0;
 
-    @media (min-width : @screen-sm) {
+    @media (min-width : @screen-lg) {
       left        : 50%;
       margin-left : -(@container-lg/2);
       }
@@ -25,7 +25,7 @@
 
   .slick-next {
     right : 0;
-    @media (min-width : @screen-sm) {
+    @media (min-width : @screen-lg) {
       right        : 50%;
       margin-right : -(@container-lg/2);
       }
@@ -144,8 +144,20 @@
             font-weight   : 600;
             margin-bottom : 100px;
 
+            @media (max-width : @screen-md-max) {
+              margin-bottom : 50px;
+              }
+
             @media (max-width : @screen-xs-max) {
               margin-bottom : 20px;
+              }
+            }
+
+          .caption-link {
+            @media (max-width : @screen-xs-max) {
+              .btn {
+                font-size: 12px !important;
+                }
               }
             }
 
@@ -155,8 +167,13 @@
             text-shadow: 1px 1px 0px @brand-primary;
             letter-spacing: 0.75rem;
 
+            @media (max-width : @screen-md-max) {
+              font-size: 40px;
+              }
+
             @media (max-width : @screen-xs-max) {
               font-size : 22px;
+              letter-spacing: 0.25rem;
               }
             }
 
@@ -165,8 +182,13 @@
             text-shadow: 1px 1px 0px @brand-primary;
             letter-spacing: 0.75rem;
 
+            @media (max-width : @screen-md-max) {
+              font-size: 20px;
+              }
+
             @media (max-width : @screen-xs-max) {
               font-size : 16px;
+              letter-spacing: 0.25rem;
               }
             }
           }

@@ -26,7 +26,7 @@ var bootstrapModule = function() {
         }), $j(".main-navigation [data-toggle=dropdown], .header-top [data-toggle=dropdown]").on("click", function(event) {
             $j(".dropdown-menu").animate({
                 scrollTop: 0
-            }, 800), event.preventDefault(), event.stopPropagation(), $j(this).parent().siblings().removeClass("open"), 
+            }, 500), event.preventDefault(), event.stopPropagation(), $j(this).parent().siblings().removeClass("open"), 
             $j(this).parent().siblings().find("[data-toggle=dropdown]").parent().removeClass("open"), 
             $j(this).parent().toggleClass("open");
         }), $j(".title-n1").on("click", function(event) {
@@ -91,7 +91,7 @@ var bootstrapModule = function() {
     function _init() {
         function searchBar() {
             var searchForm = $j("#search-box_id");
-            $j(window).width() < 768 && ($j(searchForm).addClass("collapse").wrap('<div class="search-row" id="search-row_id"></div>'), 
+            $j(window).width() < 768 && $j(searchForm).not().parent(".search-row") && ($j(searchForm).addClass("collapse").wrap('<div class="search-row" id="search-row_id"></div>'), 
             $j("#search-row_id").prependTo(".header--navbar .container"));
         }
         searchBar(), $j(window).resize(function() {

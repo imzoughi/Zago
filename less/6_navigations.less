@@ -324,10 +324,11 @@ header.full-width .dropdown-menu .dropdown-menu.to-left {
   }
 
 .mega-menu .dropdown-menu {
-  left     : 0;
-  width    : 100%;
-  padding  : 0 0 20px 0;
-  overflow : auto;
+  left       : 0;
+  width      : 100%;
+  padding    : 0 0 20px 0;
+  overflow   : auto;
+  overflow-x : hidden;
 
   @media (min-width : @screen-sm) {
     max-height : 85vh;
@@ -548,7 +549,7 @@ header .dropdown-menu > li.active > a i.fa-circle-o:before {
     }
 
   &:hover {
-    color: @gray-light;
+    color           : @gray-light;
     text-decoration : none;
     }
   }

@@ -1,9 +1,9 @@
-Paris&CO
+ZAGO
 
 Build & development
 
 - Download the last version of node
-- cd ParisCo/
+- cd Zago/
 - npm install
 - npm install -g bower
 - bower install (install front dependencies inside a directory called "inc")

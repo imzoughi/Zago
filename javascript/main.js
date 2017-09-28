@@ -71,7 +71,7 @@ var mainNav = function () {
 
             $j('.main-navigation [data-toggle=dropdown], .header-top [data-toggle=dropdown]').on('click', function (event) {
 
-                $j(".dropdown-menu").animate({scrollTop: 0}, 800);
+                $j(".dropdown-menu").animate({scrollTop: 0}, 500);
 
                 // Avoid following the href location when clicking
                 event.preventDefault();
@@ -233,8 +233,10 @@ var responsive = function () {
             var searchForm = $j('#search-box_id');
 
             if($j(window).width() < 768) {
-                $j(searchForm).addClass('collapse').wrap('<div class="search-row" id="search-row_id"></div>');
-                $j('#search-row_id').prependTo('.header--navbar .container');
+                if($j(searchForm).not().parent('.search-row')) {
+                    $j(searchForm).addClass('collapse').wrap('<div class="search-row" id="search-row_id"></div>');
+                    $j('#search-row_id').prependTo('.header--navbar .container');
+                }
             }
         }
         searchBar();
