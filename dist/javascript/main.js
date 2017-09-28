@@ -53,8 +53,6 @@ var bootstrapModule = function() {
             });
         }), $j(".btn-main-menu").on("click", function(e) {
             e.preventDefault(), $j(".main-navigation").slideToggle();
-        }), $j(".btn-search-xs").on("click", function(e) {
-            e.preventDefault(), $j(this).toggleClass("is-open"), $j("#search-box_id").slideToggle();
         }), $j(".btn-user-xs").on("click", function(e) {
             e.preventDefault(), $j(this).toggleClass("is-open"), $j(".nav-user").slideToggle();
         }), $j('.navbar-toggle[data-target="#main-navigation_id"]').on("click", function(e) {
@@ -90,11 +88,14 @@ var bootstrapModule = function() {
 }(), responsive = function() {
     function _init() {
         function searchBar() {
-            var searchForm = $j("#search-box_id");
+            var searchMobileBox = $j("#search-box_id"), searchMobileBoxInput = $j("#search-box-input_id");
             if ($j(window).width() < 768) {
-                if (!$j(searchForm).not().parent(".search-row")) return;
-                $j(searchForm).addClass("collapse").wrap('<div class="search-row" id="search-row_id"></div>'), 
-                $j("#search-row_id").prependTo(".header--navbar .container");
+                if (!($j(searchMobileBox).parent(".search-row").length < 1)) return;
+                $j(searchMobileBox).addClass("collapse").wrap('<div class="search-row" id="search-row_id"></div>'), 
+                $j("#search-row_id").prependTo(".header--navbar .container"), $j(searchMobileBox).on("mouseup", function(e) {
+                    var target = e.target;
+                    $j(target).is(searchMobileBoxInput) && console.log("in");
+                });
             }
         }
         searchBar(), $j(window).resize(function() {

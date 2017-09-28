@@ -149,12 +149,6 @@ var mainNav = function () {
             $j('.main-navigation').slideToggle();
         });
 
-        $j('.btn-search-xs').on('click', function (e) {
-            e.preventDefault();
-            $j(this).toggleClass('is-open');
-            $j('#search-box_id').slideToggle();
-        });
-
         $j('.btn-user-xs').on('click', function (e) {
             e.preventDefault();
             $j(this).toggleClass('is-open');
@@ -230,15 +224,29 @@ var responsive = function () {
     function _init() {
 
         function searchBar() {
-            var searchForm = $j('#search-box_id');
+            var searchMobileBox = $j('#search-box_id');
+            var searchMobileBoxInput = $j('#search-box-input_id');
 
             if($j(window).width() < 768) {
-                if($j(searchForm).not().parent('.search-row')) {
-                    $j(searchForm).addClass('collapse').wrap('<div class="search-row" id="search-row_id"></div>');
+                if($j(searchMobileBox).parent('.search-row').length < 1) {
+                    $j(searchMobileBox).addClass('collapse').wrap('<div class="search-row" id="search-row_id"></div>');
                     $j('#search-row_id').prependTo('.header--navbar .container');
                 } else {
                     return;
                 }
+
+                $j(searchMobileBox).on('mouseup', function (e) {
+
+                    var target = e.target;
+
+                    if ($j(target).is(searchMobileBoxInput)) {
+                        console.log('in');
+                    } else {
+                        // $j(searchBox).removeClass('is-large');
+                        // $j(searchBox).css({width: '100%'});
+                        // $j(searchBoxClose).hide();
+                    }
+                });
             }
         }
         searchBar();
