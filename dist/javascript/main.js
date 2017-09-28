@@ -91,8 +91,11 @@ var bootstrapModule = function() {
     function _init() {
         function searchBar() {
             var searchForm = $j("#search-box_id");
-            $j(window).width() < 768 && $j(searchForm).not().parent(".search-row") && ($j(searchForm).addClass("collapse").wrap('<div class="search-row" id="search-row_id"></div>'), 
-            $j("#search-row_id").prependTo(".header--navbar .container"));
+            if ($j(window).width() < 768) {
+                if (!$j(searchForm).not().parent(".search-row")) return;
+                $j(searchForm).addClass("collapse").wrap('<div class="search-row" id="search-row_id"></div>'), 
+                $j("#search-row_id").prependTo(".header--navbar .container");
+            }
         }
         searchBar(), $j(window).resize(function() {
             searchBar();

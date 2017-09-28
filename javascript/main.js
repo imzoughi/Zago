@@ -236,6 +236,8 @@ var responsive = function () {
                 if($j(searchForm).not().parent('.search-row')) {
                     $j(searchForm).addClass('collapse').wrap('<div class="search-row" id="search-row_id"></div>');
                     $j('#search-row_id').prependTo('.header--navbar .container');
+                } else {
+                    return;
                 }
             }
         }
